@@ -1,3 +1,8 @@
-def wijzig(letterlijst)
-    for i in letterlijst[
-        ['a', 'b', 'c']
+lijst = ['a', 'b', 'c']
+def wijzig():
+    lijst[0] = 'd'
+    lijst[1] =' e'
+    lijst[2] = 'f'
+
+wijzig()
+print(lijst)
