@@ -1,6 +1,4 @@
-
-
-def som():
-    getallenLijst = [1, 2, 3, 4, 8, 6, 9]
+def som(getallenLijst):
     return sum(getallenLijst)
-print(som())
+
+print(som([1, 2, 3, 4, 8, 6, 9]))

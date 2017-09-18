@@ -1,6 +1,5 @@
-def new_password():
+def new_password(newpassword ):
     oldpassword = 'jannes2'
-    newpassword = input('Voer je nieuwe wachtwoord in')
     if newpassword != oldpassword and len(newpassword) >= 6 :
        if any(str.isdigit(c) for c in newpassword):
            print('Nieuw wachtwoord voldoet')
@@ -9,4 +8,4 @@ def new_password():
     else:
         print('false')
 
-new_password()
+new_password(input('Voer je nieuwe wachtwoord in'))
