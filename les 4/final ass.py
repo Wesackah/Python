@@ -1,15 +1,13 @@
 def standaardprijs(afstandKM):
      if afstandKM > 50:
-        kost = 15 + (afstandKM - 50)*.6
+        kost = 15 + afstandKM*.6
         return kost
-     else:
-        if afstandKM <= 0:
+     elif afstandKM <= 0:
             kost = 0
             return kost
-        else:
+     else:
             kost = afstandKM*.8
             return kost
-
 
 def ritprijs(leeftijd, weekendrit, afstandKM):
     if leeftijd < 12 or leeftijd >= 65:
@@ -23,6 +21,11 @@ def ritprijs(leeftijd, weekendrit, afstandKM):
         else:
             return standaardprijs(afstandKM)
 
-x = 20
-print(standaardprijs(x))
-print(ritprijs(15,True,x))
+x = eval(input('Aantal km gereisd?'))
+y = input('is het weekend?')
+z = eval(input('Wat is je leeftijd?'))
+p = ['ja', 'Ja', 'JA', 'jA']
+if y in p:
+    print(ritprijs(z,True,x))
+else:
+    print(ritprijs(z,False,x))
