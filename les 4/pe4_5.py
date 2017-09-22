@@ -6,3 +6,11 @@ def kwadraten_som(grondgetallen):
     return totaal
 print(kwadraten_som( [ 4, 5, 3, -81 ]))
 
+
+def kw_som(lst):
+    kwSom = 0
+    for getal in lst:
+        kwSom = kwSom + getal**2
+    return kwSom
+
+print(kw_som([4,5,3]))
