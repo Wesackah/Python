@@ -76,13 +76,13 @@ while True:
                         if len(ww) < 4:
                             print('Wachtwoord is te kort (minimaal 4 tekens)\n')
                         else:
-                            if ww in lst_ww:
-                                if lst_ww.index(ww) == lst_open.index(open_nr):
-                                    print('U kunt de kluis openen\n')
-                                else:
-                                    print('Incorrect wachtwoord\n')
+                            check = list(enumerate(lst_ww))
+                            key = ww
+                            pop = (lst_open.index(open_nr), ww)
+                            if pop in check:
+                                print('U kunt de kluis openen\n')
                             else:
-                                print('Incorrect wachtwoord\n')
+                                print('Verkeerd wachtwoord')
                     else:
                         print('Deze kluis is niet in gebruik\n')
                 else:
@@ -114,11 +114,14 @@ while True:
                         print('Wachtwoord is te kort \n')
                     else:
                         if ww_weg in lst_ww_weg:
-                            if lst_ww_weg.index(ww_weg) == lst_open_weg.index(open_nr_weg):
+                            check = list(enumerate(lst_ww_weg))
+                            key = ww_weg
+                            pop = (lst_open_weg.index(open_nr_weg), ww_weg)
+                            if pop in check:
                                 outfile = open('kluizen.txt', 'w')
                                 outfile.close()
-                                for i in range(0,len(lst_ww_weg)):
-                                    if i != lst_ww_weg.index(ww_weg):
+                                for i in range(0,len(lst_open_weg)):
+                                    if i != lst_open_weg.index(open_nr_weg):
                                         writefile = open('kluizen.txt', 'a')
                                         writefile.write(lst_open_weg[i] + ';')
                                         writefile.write(lst_ww_weg[i] + '\n')

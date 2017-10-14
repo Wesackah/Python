@@ -1,7 +1,7 @@
 import random
 
 def Monopolyworp():
-    count = 0
+    count = 1
     while True:
         x = random.randrange(1,7)
         y = random.randrange(1,7)
