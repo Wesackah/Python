@@ -1,0 +1,7 @@
+y = waar, n = niet waar
+
+            Geordend    Muteerbaar  Iterable    Dubbele waarden toegestaan
+Tuple       y           y           y           y
+Dictionary  n           n           y           n
+Set         y           n           n           n
+List        n           y           y           y
